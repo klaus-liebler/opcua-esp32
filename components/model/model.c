@@ -3,9 +3,6 @@
 #include "DHT22.h"
 #include "driver/gpio.h"
 
-static void
-configureGPIO();
-
 /* GPIO Configuration */
 static void
 configureGPIO(void) {

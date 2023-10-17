@@ -3,11 +3,12 @@
 /* GPIO Numbers */
 // #define BLINK_GPIO 2
 #define DHT22_GPIO 4
-#define RELAY_0_GPIO 32
-#define RELAY_1_GPIO 33
-// #define RELAY_2_GPIO 26
-// #define RELAY_3_GPIO 27
+#define RELAY_0_GPIO 5
+#define RELAY_1_GPIO 6
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 // /* Led Method */
 // UA_StatusCode
 // ledProcessCallBack(UA_Server *server,
@@ -64,3 +65,7 @@ setRelay1State(UA_Server *server,
 
 void
 addRelay1ControlNode(UA_Server *server);
+
+#ifdef __cplusplus
+}
+#endif

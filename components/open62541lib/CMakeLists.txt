@@ -1,3 +1,4 @@
 idf_component_register(SRCS "open62541.c"
                     INCLUDE_DIRS "include")
-component_compile_options(-Wno-error=format= -Wno-format -Wempty-body)
+target_compile_options(${COMPONENT_LIB} PRIVATE -Wno-format -Wempty-body)
+add_compile_definitions("UA_ARCHITECTURE_FREERTOSLWIP")
